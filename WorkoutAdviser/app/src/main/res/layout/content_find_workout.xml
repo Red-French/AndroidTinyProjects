@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="net.redfrench.workoutadviser.FindWorkoutActivity"
+    tools:showIn="@layout/activity_find_workout">
+
+    <Spinner
+        android:id="@+id/workoutTypeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:entries="@array/workout_types"/>
+
+    <TextView
+        android:id="@+id/workoutDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Workouts Are Here!"
+        android:layout_below="@+id/findWorkoutBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"/>
+
+    <Button
+        android:id="@+id/findWorkoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Workout Routine"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/workoutTypeSpinner"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickFindWorkout"/>
+
+
+</RelativeLayout>
