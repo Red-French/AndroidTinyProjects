@@ -1,6 +1,5 @@
 package net.redfrench.gestures;
 
-import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
@@ -22,11 +21,13 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
         gestureDetector.setOnDoubleTapListener(this);
     }
 
-    @Override
+
+    @Override  // detect gesture
     public boolean onTouchEvent(MotionEvent event) {
         this.gestureDetector.onTouchEvent(event);
         return super.onTouchEvent(event);
     }
+
 
     @Override
     public boolean onSingleTapConfirmed(MotionEvent e) {
